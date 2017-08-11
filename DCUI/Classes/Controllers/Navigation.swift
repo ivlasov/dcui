@@ -9,42 +9,6 @@
 import UIKit
 
 public extension UINavigationController {
-    override open class func initialize() {
-        struct Static {
-            static var token: Int = 0
-        }
-        
-        // make sure this isn't a subclass
-        if self !== UINavigationController.self {
-            return
-        }
-        
-        if Static.token == 0 {
-            let originalSelector = #selector(UINavigationController.awakeFromNib)
-            let swizzledSelector = #selector(UINavigationController.customAwake)
-            
-            let originalMethod = class_getInstanceMethod(self, originalSelector)
-            let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
-            
-            let didAddMethod = class_addMethod(self, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
-            
-            if didAddMethod {
-                class_replaceMethod(self, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod))
-            } else {
-                method_exchangeImplementations(originalMethod, swizzledMethod)
-            }
-            Static.token = 1
-        }
-    }
-    
-    // MARK: - Method Swizzling
-    
-    func customAwake(_ animated: Bool) {
-        navigation = Navigation(navController: self)
-    }
-}
-
-public extension UINavigationController {
     
     fileprivate struct NavigationControllerExtraKeys {
         static var useNavigationRules = "useNavigationRules"
@@ -127,7 +91,7 @@ extension UINavigationController {
         static var navigation = "navigation"
     }
     
-    var navigation: Navigation? {
+    @IBOutlet var navigation: Navigation? {
         get {
             if let value: Navigation = RuntimeGetAssociatedObject(self, key: &NavigationKeys.navigation) {
                 return value
@@ -143,13 +107,7 @@ extension UINavigationController {
 
 open class Navigation: NSObject, UINavigationControllerDelegate, UIViewControllerTransitioningDelegate {
     
-    init(navController: UINavigationController) {
-        super.init()
-        navigationController = navController
-        navigationController.delegate = self
-    }
-    
-    fileprivate(set) open weak var navigationController: UINavigationController!
+    open weak var navigationController: UINavigationController!
     
     open func handleShow(_ viewController: UIViewController, animated: Bool) {
         adjustViewController(viewController)
