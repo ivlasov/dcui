@@ -99,6 +99,7 @@ extension UINavigationController {
             return nil
         }
         set {
+            newValue?.navigationController = self
             RuntimeSetAssociatedObject(self, value: newValue, key: &NavigationKeys.navigation)
         }
     }
