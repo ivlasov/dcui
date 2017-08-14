@@ -190,7 +190,7 @@ public extension UIImage {
     
 }
 
-extension String {
+public extension String {
     
     func toUIImage() -> UIImage? {
         return UIImage(named: self)
