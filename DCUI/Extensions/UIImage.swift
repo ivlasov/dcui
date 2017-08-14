@@ -190,6 +190,14 @@ public extension UIImage {
     
 }
 
+extension String {
+    
+    func toUIImage() -> UIImage? {
+        return UIImage(named: self)
+    }
+    
+}
+
 public func UIImageNamed(_ name: String?) -> UIImage? {
     if let name = name {
         return UIImage(named: name)

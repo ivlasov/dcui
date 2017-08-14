@@ -155,8 +155,8 @@ public extension UIColor {
 
 public extension String {
     
-    func toUIColor() -> UIColor? {
-        return UIColor(hex: self)
+    func toUIColor() -> UIColor {
+        return UIColor(hex: self) ?? UIColor.clear
     }
     
 }

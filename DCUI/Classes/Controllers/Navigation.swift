@@ -85,7 +85,7 @@ public extension UIViewController {
     
 }
 
-extension UINavigationController {
+public extension UINavigationController {
     
     fileprivate struct NavigationKeys {
         static var navigation = "navigation"
