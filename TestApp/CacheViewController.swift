@@ -6,7 +6,7 @@
 //  Copyright © 2016 Igor Danich. All rights reserved.
 //
 
-import MPUI
+import DCUI
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -16,7 +16,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        testVideo()
+//        testVideo()
+        
+        
+        
     }
     
     func testVideo() {

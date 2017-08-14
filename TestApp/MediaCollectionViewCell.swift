@@ -6,7 +6,7 @@
 //  Copyright © 2016 Igor Danich. All rights reserved.
 //
 
-import MPUI
+import DCUI
 
 class MediaCollectionViewCell: UICollectionViewCell {
     
@@ -15,8 +15,8 @@ class MediaCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         mediaView.contentMode = .scaleAspectFit
-        mediaView.defaultImage = UIImageDraw(mediaView.size) { (size, _) in
-            UIColorRandom().setFill()
+        mediaView.defaultImage = UIImage.draw(size: mediaView.size) { (size, _) in
+            UIColor.random().setFill()
             UIBezierPath(rect: CGRect(x: 0, y: 0, width: size.width, height: size.height)).fill()
         }
     }

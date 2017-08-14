@@ -41,6 +41,23 @@ public extension UIBarButtonItem {
         action = #selector(UIBarButtonItem.onAction)
     }
     
+    public convenience init(text: String?, font: UIFont? = nil, image: UIImage?, handler: ((UIBarButtonItem) -> Void)?) {
+        let btn = UIButton(type: .custom)
+        if let text = text {
+            var attrs = [String:Any]()
+            attrs << UIBarButtonItem.appearance().titleTextAttributes(for: .normal)
+            if let font = font {
+                attrs[NSFontAttributeName] = font
+            }
+            btn.setAttributedTitle(NSAttributedString(string: text, attributes: attrs), for: .normal)
+        }
+        btn.setImage(image, for: .normal)
+        btn.sizeToFit()
+        self.init(customView: btn)
+        btn.addTarget(self, action: #selector(UIBarButtonItem.onAction), for: .touchUpInside)
+        buttonHandler = handler
+    }
+    
     func onAction() {
         buttonHandler?(self)
     }

@@ -5,7 +5,7 @@
 //  Copyright © 2016 dclife. All rights reserved.
 //
 
-import MPUI
+import DCUI
 
 @IBDesignable
 class MediaView: UIButton {
@@ -27,7 +27,7 @@ class MediaView: UIButton {
         }
     }
     
-    @IBInspectable var indicatorColor: UIColor? = UIColorBlack() {
+    @IBInspectable var indicatorColor: UIColor? = UIColor.black {
         didSet {
             indicator?.color = indicatorColor
         }

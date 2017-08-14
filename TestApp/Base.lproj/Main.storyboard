@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iOB-g2-qPb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,7 +38,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bz7-rL-4cX" customClass="MediaView" customModule="TestApp" customModuleProvider="target">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bz7-rL-4cX" customClass="MediaView" customModule="TestApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,5 +72,102 @@
             </objects>
             <point key="canvasLocation" x="-391.19999999999999" y="117.39130434782609"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vWX-zR-Qzz">
+            <objects>
+                <navigationController id="iOB-g2-qPb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wbt-Et-yKo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <outlet property="navigation" destination="DsM-nn-WeH" id="HfH-b5-vZn"/>
+                        <outlet property="navigationProperties" destination="IbP-Zu-uqd" id="2XL-e0-wau"/>
+                        <segue destination="Hyb-Xj-iNM" kind="relationship" relationship="rootViewController" id="rXY-QZ-sBj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eS0-uH-eHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="DsM-nn-WeH" customClass="Navigation" customModule="DCUI"/>
+                <customObject id="IbP-Zu-uqd" customClass="NavigationProperties" customModule="DCUI">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
+                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="backImage" value="back"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backTitle" value=" "/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-1241" y="825"/>
+        </scene>
+        <!--Navigate View Controller-->
+        <scene sceneID="VIH-5H-idP">
+            <objects>
+                <viewController id="Hyb-Xj-iNM" customClass="NavigateViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jW5-vD-osQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="vXf-9h-w7F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NWZ-bk-OaI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfV-cq-pTR">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="ji6-Vh-SKY" kind="show" id="0S3-a1-1RM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QfV-cq-pTR" firstAttribute="centerY" secondItem="NWZ-bk-OaI" secondAttribute="centerY" id="NBp-It-lFU"/>
+                            <constraint firstItem="QfV-cq-pTR" firstAttribute="centerX" secondItem="NWZ-bk-OaI" secondAttribute="centerX" id="u5F-XF-ZnL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="01Z-fJ-HZq"/>
+                    <connections>
+                        <outlet property="navigationProperties" destination="2BF-VU-6ay" id="x43-1K-N6W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3y-mQ-IMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="2BF-VU-6ay" customClass="NavigationProperties" customModule="DCUI"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="826"/>
+        </scene>
+        <!--Navigate View Controller2-->
+        <scene sceneID="ONQ-aY-Nau">
+            <objects>
+                <viewController id="ji6-Vh-SKY" customClass="NavigateViewController2" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CQf-5V-tjO"/>
+                        <viewControllerLayoutGuide type="bottom" id="yVG-oG-y0r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JBp-MP-NeC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yw7-Eu-uPn"/>
+                    <connections>
+                        <outlet property="navigationProperties" destination="hgr-av-aMp" id="c8x-iQ-U28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojf-jR-27H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="hgr-av-aMp" customClass="NavigationProperties" customModule="DCUI">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
+                            <color key="value" red="0.81960784310000001" green="0.67843137249999996" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="barCleared" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="382" y="825"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="back" width="22" height="32"/>
+    </resources>
 </document>
