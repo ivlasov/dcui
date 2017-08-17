@@ -73,7 +73,7 @@ open class Navigation: NSObject, UINavigationControllerDelegate {
 
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         handleShow(viewController, animated: animated)
-        delegate?.navigationController(navigationController, willShow: viewController, animated: animated)
+        delegate?.navigationController?(navigationController, willShow: viewController, animated: animated)
     }
 
     open func navigationController(
