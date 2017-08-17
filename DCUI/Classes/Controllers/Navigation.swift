@@ -39,7 +39,7 @@ open class Navigation: NSObject, UINavigationControllerDelegate {
     
     // MARK: - UINavigationControllerDelegate
     
-    open func handleShow(_ viewController: UIViewController, animated: Bool) {
+    fileprivate func handleShow(_ viewController: UIViewController, animated: Bool) {
         adjustViewController(viewController)
     }
 
@@ -73,6 +73,7 @@ open class Navigation: NSObject, UINavigationControllerDelegate {
 
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         handleShow(viewController, animated: animated)
+        delegate?.navigationController(navigationController, willShow: viewController, animated: animated)
     }
 
     open func navigationController(
@@ -131,160 +132,3 @@ public extension UIViewController {
     }
     
 }
-
-//public extension UINavigationController {
-//    
-//    fileprivate struct NavigationKeys {
-//        static var navigation = "navigation"
-//    }
-//    
-//    override weak open var delegate: UINavigationControllerDelegate? {
-//        didSet {
-//            
-//        }
-//    }
-//    
-////    @IBInspectable var customizeNavigation: Bool {
-////        set {
-////            Navigation()
-////            navigation = customizeNavigation ? Navigation
-////        }
-////        get {
-////            return false
-////        }
-////    }
-//}
-//
-//extension UINavigationController {
-//
-//    var navigation: Navigation? {
-//        get {
-//            if let value: Navigation = RuntimeGetAssociatedObject(self, key: &NavigationKeys.navigation) {
-//                return value
-//            }
-//            return nil
-//        }
-//        set {
-//            newValue?.navigationController = self
-//            RuntimeSetAssociatedObject(self, value: newValue, key: &NavigationKeys.navigation)
-//        }
-//    }
-//    
-//}
-//
-//public extension UIViewController {
-//    
-//    fileprivate struct ViewControllerNavigationKeys {
-//        static var navigationBarTintColor = "navigationBarTintColor"
-//        static var clearBackButtonTitle = "clearBackButtonTitle"
-//        static var navigationBarHidden = "navigationBarHidden"
-//        static var navigationBarCleared = "navigationBarCleared"
-//        static var useNavigationRules = "useNavigationRules"
-//    }
-//    
-//    @IBInspectable var navigationBarTintColor: UIColor? {
-//        get {
-//            return RuntimeGetAssociatedObject(self, key: &ViewControllerNavigationKeys.navigationBarTintColor)
-//        }
-//        set {
-//            RuntimeSetAssociatedObject(self, value: newValue, key: &ViewControllerNavigationKeys.navigationBarTintColor)
-//        }
-//    }
-//    
-//    @IBInspectable var clearBackButtonTitle: Bool {
-//        get {
-//            if let value: Bool = RuntimeGetAssociatedObject(self, key: &ViewControllerNavigationKeys.clearBackButtonTitle) {
-//                return value
-//            }
-//            return false
-//        }
-//        set {
-//            RuntimeSetAssociatedObject(self, value: newValue, key: &ViewControllerNavigationKeys.clearBackButtonTitle)
-//        }
-//    }
-//    
-//    @IBInspectable var navigationBarHidden: Bool {
-//        get {
-//            if let value: Bool = RuntimeGetAssociatedObject(self, key: &ViewControllerNavigationKeys.navigationBarHidden) {
-//                return value
-//            }
-//            return false
-//        }
-//        set {
-//            RuntimeSetAssociatedObject(self, value: newValue, key: &ViewControllerNavigationKeys.navigationBarHidden)
-//        }
-//    }
-//    
-//    @IBInspectable var navigationBarCleared: Bool {
-//        get {
-//            if let value: Bool = RuntimeGetAssociatedObject(self, key: &ViewControllerNavigationKeys.navigationBarCleared) {
-//                return value
-//            }
-//            return false
-//        }
-//        set {
-//            RuntimeSetAssociatedObject(self, value: newValue, key: &ViewControllerNavigationKeys.navigationBarCleared)
-//        }
-//    }
-//    
-//}
-//
-//class Navigation: NSObject, UINavigationControllerDelegate, UIViewControllerTransitioningDelegate {
-//    
-//    weak var navigationController: UINavigationController!
-//    
-////    override init() {
-////        super.init()
-////    }
-//    
-////    init(navigationController: UINavigationController) {
-////        super.init()
-////        navigationController
-////    }
-//    
-////
-////    open func handleShow(_ viewController: UIViewController, animated: Bool) {
-////        adjustViewController(viewController)
-////    }
-////    
-////    fileprivate func adjustViewController(_ ctrl: UIViewController) {
-////        navigationController.setNavigationBarHidden(ctrl.navigationBarHidden, animated: true)
-////        if ctrl.navigationBarCleared {
-////            navigationController.navigationBar.clear()
-////        } else {
-////            navigationController.navigationBar.reset()
-////        }
-////        if let color = ctrl.navigationBarTintColor {
-////            navigationController.navigationBar.tintColor = color
-////        } else {
-////            navigationController.navigationBar.tintColor = UINavigationBar.appearance().tintColor
-////        }
-////        if ctrl.clearBackButtonTitle || navigationController.clearBackButtonTitle {
-////            ctrl.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
-////        }
-////    }
-////    
-////    // MARK: - UINavigationControllerDelegate
-////    
-////    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-////        handleShow(viewController, animated: animated)
-////    }
-////    
-////    open func navigationController(
-////        _ navigationController: UINavigationController,
-////        animationControllerFor operation: UINavigationControllerOperation,
-////        from fromVC: UIViewController,
-////        to toVC: UIViewController
-////        ) -> UIViewControllerAnimatedTransitioning? {
-////        if let animation = navigationController.viewControllers.last?.transitioningAnimation {
-////            if animation == "default" {
-////                return nil
-////            } else {
-////                return TransitionAnimation.animationForKey(animation)
-////            }
-////        } else {
-////            return navigationController.transitioningController.navigationAnimation(operation)
-////        }
-////    }
-//    
-//}
