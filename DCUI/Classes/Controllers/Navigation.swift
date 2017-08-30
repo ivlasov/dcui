@@ -29,7 +29,7 @@ public extension UINavigationController {
 
 open class Navigation: NSObject, UINavigationControllerDelegate {
     
-    weak var delegate: UINavigationControllerDelegate?
+    public weak var delegate: UINavigationControllerDelegate?
     weak var navigationController: UINavigationController! {
         didSet {
             delegate = navigationController?.delegate
@@ -74,6 +74,10 @@ open class Navigation: NSObject, UINavigationControllerDelegate {
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         handleShow(viewController, animated: animated)
         delegate?.navigationController?(navigationController, willShow: viewController, animated: animated)
+    }
+    
+    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        delegate?.navigationController?(navigationController, didShow: viewController, animated: animated)
     }
 
     open func navigationController(
