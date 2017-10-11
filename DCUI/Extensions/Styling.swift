@@ -26,7 +26,7 @@ public extension NSObject {
         }
     }
     
-    func applyStyle() {
+    @objc func applyStyle() {
         guard let style = Style.for(object: self) else {return}
         if let className = style.className {
             guard NSStringFromClass(self.classForCoder).components(separatedBy: ".").last == className else {return}
@@ -36,7 +36,7 @@ public extension NSObject {
         }
     }
     
-    func styleProperty(key: String, value: AnyObject?) -> AnyObject? {
+    @objc func styleProperty(key: String, value: AnyObject?) -> AnyObject? {
         return value
     }
     

@@ -82,7 +82,7 @@ public extension UIViewController {
         }
     }
     
-    func localize() {
+    @objc func localize() {
         if isViewLoaded {
             view.localize()
         }
@@ -149,7 +149,7 @@ public extension UIBarButtonItem {
 }
 
 public extension UIView {
-    public func localize() {
+    @objc public func localize() {
         for view in subviews {
             view.localize()
         }

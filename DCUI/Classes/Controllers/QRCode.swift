@@ -28,7 +28,7 @@ public func makeQRCode(_ text: String, size: CGSize, correctionLevel: QRCorrecti
             
             let scaleX = size.width / cIImage.extent.size.width
             let scaleY = size.height / cIImage.extent.size.height
-            let transformedImage = cIImage.applying(CGAffineTransform(scaleX: scaleX, y: scaleY))
+            let transformedImage = cIImage.transformed(by: CGAffineTransform(scaleX: scaleX, y: scaleY))
             
             return UIImage(ciImage: transformedImage)
         }

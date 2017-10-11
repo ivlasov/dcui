@@ -94,7 +94,7 @@ public extension UIImage {
     public func imageScaledToSize(_ size: CGSize, contentMode: ContentMode = .fill, alignment: Alignment = .center, scale: CGFloat = UIScreen.main.scale) -> UIImage? {
         let frame = frameToFitIn(size, contentMode: contentMode, alignment: alignment)
         guard CGRect.zero != frame else {return nil}
-        return UIImage.draw(size: size) { _ in
+        return UIImage.draw(size: size) { _,_  in
             self.draw(in: frame)
         }
     }
@@ -103,7 +103,7 @@ public extension UIImage {
         let newSize = CGSize(width: size.width*percentage.width, height: size.height*percentage.height)
         let frame = frameToFitIn(newSize, contentMode: contentMode, alignment: alignment)
         guard CGRect.zero != frame else {return nil}
-        return UIImage.draw(size: size) { _ in
+        return UIImage.draw(size: size) { _,_  in
             self.draw(in: frame)
         }
     }
@@ -171,7 +171,7 @@ public extension UIImage {
         return newImage
     }
     
-    static func draw(size: CGSize, scale: CGFloat = UIScreen.main.scale, handler: ((CGSize, CGContext) -> Void)) -> UIImage {
+    static func draw(size: CGSize, scale: CGFloat = UIScreen.main.scale, _ handler: ((CGSize, CGContext) -> Void)) -> UIImage {
         var size = size
         if size.width == 0 {
             size.width = 1

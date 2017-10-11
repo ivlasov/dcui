@@ -10,6 +10,7 @@ import UIKit
 import DCFoundation
 
 public extension UIView {
+
     
     fileprivate struct UIViewPrivate {
         static var identifier = "view_identifier"

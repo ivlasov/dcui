@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <DCFoundation/DCFoundation.h>
+@import DCFoundation;
 #import <DCUI/DCUIUtils.h>
 
 //! Project version number for MPUI.

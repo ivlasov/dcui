@@ -44,10 +44,10 @@ public extension UIBarButtonItem {
     public convenience init(text: String?, font: UIFont? = nil, image: UIImage?, handler: ((UIBarButtonItem) -> Void)?) {
         let btn = UIButton(type: .custom)
         if let text = text {
-            var attrs = [String:Any]()
-            attrs << UIBarButtonItem.appearance().titleTextAttributes(for: .normal)
+            var attrs = [NSAttributedStringKey:Any]()
+//            attrs << UIBarButtonItem.appearance().titleTextAttributes(for: .normal)
             if let font = font {
-                attrs[NSFontAttributeName] = font
+                attrs[.font] = font
             }
             btn.setAttributedTitle(NSAttributedString(string: text, attributes: attrs), for: .normal)
         }
@@ -58,7 +58,7 @@ public extension UIBarButtonItem {
         buttonHandler = handler
     }
     
-    func onAction() {
+    @objc func onAction() {
         buttonHandler?(self)
     }
     

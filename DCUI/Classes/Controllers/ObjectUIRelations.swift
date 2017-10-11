@@ -239,13 +239,13 @@ open class ObjectUIRelations: NSObject {
         }
     }
  
-    open func onSwitch(_ sender: UISwitch) {
+    @objc open func onSwitch(_ sender: UISwitch) {
         for item in items {
             updateItem(item, view: sender)
         }
     }
     
-    open func onTextField(_ ntf: Notification) {
+    @objc open func onTextField(_ ntf: Notification) {
         if let view = ntf.object as? UIView {
             for item in items {
                 updateItem(item, view: view)
@@ -253,7 +253,7 @@ open class ObjectUIRelations: NSObject {
         }
     }
     
-    open func onSegmentedControl(_ sender: UISegmentedControl) {
+    @objc open func onSegmentedControl(_ sender: UISegmentedControl) {
         for item in items {
             updateItem(item, view: sender)
         }

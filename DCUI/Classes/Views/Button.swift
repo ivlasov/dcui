@@ -122,7 +122,7 @@ open class Button: UIButton {
                 exists = value
             }
             if !exists {
-                super.setBackgroundImage(UIImage.draw(size: size, handler: { (size, context) in
+                super.setBackgroundImage(UIImage.draw(size: size, { (size, context) in
                     color.setFill()
                     let frame = CGRect(x: self.borderWidth/2, y: self.borderWidth/2, width: size.width - self.borderWidth, height: size.height - self.borderWidth)
                     let path = UIBezierPath(roundedRect: frame, cornerRadius: self.cornerRadius)
