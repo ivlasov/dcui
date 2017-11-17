@@ -22,7 +22,7 @@ public class CacheVideoStorageProvider: CacheDiskProvider {
         }
     }
     
-    public init() {
+    override init() {
         super.init(fileExtension: "mp4")
     }
     
