@@ -13,7 +13,8 @@ public func ShowLocalizedAlert(text: String?, inViewController: UIViewController
     if ctrl == nil {
         var window: UIWindow?
         for item in UIApplication.shared.windows {
-            if !NSStringFromClass(item.classForCoder).contains("UIRemoteKeyboardWindow") {
+            if  !NSStringFromClass(item.classForCoder).contains("UIRemoteKeyboardWindow") &&
+                !NSStringFromClass(item.classForCoder).contains("_UIInteractiveHighlightEffectWindow") {
                 window = item
             }
         }
