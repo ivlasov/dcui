@@ -127,36 +127,6 @@ public extension UIView {
         }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
-        }
-    }
-    
-    @IBInspectable public var borderWidth: CGFloat {
-        get {
-            return layer.borderWidth
-        }
-        set {
-            layer.borderWidth = newValue
-        }
-    }
-    
-    @IBInspectable public var borderColor: UIColor? {
-        get {
-            if let color = layer.borderColor {
-                return UIColor(cgColor: color)
-            }
-            return nil
-        }
-        set {
-            layer.borderColor = newValue?.cgColor
-        }
-    }
-    
     public func snapshot(frame: CGRect = CGRect.zero) -> UIImage? {
         var frame = frame
         if frame == CGRect.zero {
