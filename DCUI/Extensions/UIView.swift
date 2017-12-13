@@ -127,7 +127,7 @@ public extension UIView {
         }
     }
     
-    @IBInspectable open var cornerRadius: CGFloat {
+    @IBInspectable public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -136,7 +136,7 @@ public extension UIView {
         }
     }
     
-    @IBInspectable open var borderWidth: CGFloat {
+    @IBInspectable public var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -145,7 +145,7 @@ public extension UIView {
         }
     }
     
-    @IBInspectable open var borderColor: UIColor? {
+    @IBInspectable public var borderColor: UIColor? {
         get {
             if let color = layer.borderColor {
                 return UIColor(cgColor: color)
