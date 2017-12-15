@@ -9,7 +9,7 @@
 import UIKit
 import DCFoundation
 
-public extension UIView {
+extension UIView {
 
     
     fileprivate struct UIViewPrivate {
@@ -124,6 +124,36 @@ public extension UIView {
         }
         get {
             return frame.size
+        }
+    }
+    
+    @IBInspectable open var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+        }
+    }
+    
+    @IBInspectable open var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable open var borderColor: UIColor? {
+        get {
+            if let color = layer.borderColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
         }
     }
     
