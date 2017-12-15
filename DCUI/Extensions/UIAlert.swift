@@ -8,17 +8,21 @@
 
 import UIKit
 
+fileprivate func FindWindow() -> UIWindow? {
+    var window: UIWindow?
+    for item in UIApplication.shared.windows {
+        if  !NSStringFromClass(item.classForCoder).contains("UIRemoteKeyboardWindow") &&
+            !NSStringFromClass(item.classForCoder).contains("_UIInteractiveHighlightEffectWindow") {
+            window = item
+        }
+    }
+    return window
+}
+
 public func ShowLocalizedAlert(text: String?, inViewController: UIViewController? = nil) {
     var ctrl = inViewController
     if ctrl == nil {
-        var window: UIWindow?
-        for item in UIApplication.shared.windows {
-            if  !NSStringFromClass(item.classForCoder).contains("UIRemoteKeyboardWindow") &&
-                !NSStringFromClass(item.classForCoder).contains("_UIInteractiveHighlightEffectWindow") {
-                window = item
-            }
-        }
-        ctrl = window?.rootViewController
+        ctrl = FindWindow()?.rootViewController
     }
     if let ctrl = ctrl {
         let alert = UIAlertController(title: nil, message: text?.localized, preferredStyle: .alert)
@@ -31,13 +35,7 @@ public func ShowLocalizedAlert(text: String?, inViewController: UIViewController
 public func ShowLocalizedAlert(text: String?, cancel: String? = nil, style: UIAlertControllerStyle, actions: [UIAlertAction], inViewController: UIViewController? = nil) {
     var ctrl = inViewController
     if ctrl == nil {
-        var window: UIWindow?
-        for item in UIApplication.shared.windows {
-            if !NSStringFromClass(item.classForCoder).contains("UIRemoteKeyboardWindow") {
-                window = item
-            }
-        }
-        ctrl = window?.rootViewController
+        ctrl = FindWindow()?.rootViewController
     }
     if let ctrl = ctrl {
         let alert = UIAlertController(title: nil, message: text?.localized, preferredStyle: style)

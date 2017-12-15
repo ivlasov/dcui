@@ -34,8 +34,7 @@ class ButtonActionView: NSObject {
     
 }
 
-@IBDesignable
-open class Button: UIButton {
+@IBDesignable open class Button: UIButton {
     
     @IBInspectable var color: UIColor? {
         get {

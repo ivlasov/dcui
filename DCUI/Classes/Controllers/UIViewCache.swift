@@ -8,13 +8,13 @@
 
 import DCFoundation
 
-class UIViewCache {
+open class UIViewCache {
     
     static let shared = UIViewCache()
     
     fileprivate var views = [String:[UIView]]()
     
-    func dequeueReusableView<T:UIView>(_ name: String, identifier: String? = nil) -> T? {
+    open func dequeueReusableView<T:UIView>(_ name: String, identifier: String? = nil) -> T? {
         if let views = views[name] {
             for view in views {
                 guard let view = view as? T else {continue}
@@ -32,7 +32,7 @@ class UIViewCache {
         return nil
     }
     
-    func trackView(_ view: UIView) {
+    open func trackView(_ view: UIView) {
         let cache = NSStringFromClass(view.classForCoder)
         if var views = views[cache] {
             views << view

@@ -175,7 +175,7 @@ extension UIView {
         pulseAnimation.toValue = 1
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulseAnimation.autoreverses = true
-        pulseAnimation.repeatCount = FLT_MAX
+        pulseAnimation.repeatCount = Float.greatestFiniteMagnitude
         pulseAnimation.isRemovedOnCompletion = false
         self.layer.add(pulseAnimation, forKey: nil)
     }

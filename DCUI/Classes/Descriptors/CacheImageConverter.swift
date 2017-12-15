@@ -8,14 +8,14 @@
 
 import Foundation
 
-open class CacheImageConverter: CacheConverter {
+public class CacheImageConverter: CacheConverter {
     
     public enum `Type`: String {
         case PNG
         case JPEG
     }
-    open fileprivate(set) var type   : Type = Type.PNG
-    open fileprivate(set) var scale  : CGFloat = UIScreen.main.scale
+    public fileprivate(set) var type   : Type = Type.PNG
+    public fileprivate(set) var scale  : CGFloat = UIScreen.main.scale
     
     public init() {
         type = .PNG

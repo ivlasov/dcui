@@ -11,15 +11,13 @@ import UIKit
 public extension UIColor {
     
     convenience init?(hex: String) {
-        var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+        var cString = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         
-        if (cString.hasPrefix("#")) {
+        if cString.hasPrefix("#") {
             cString = (cString as NSString).substring(from: 1)
         }
         
-        if (cString.characters.count != 6) {
-            return nil
-        }
+        if cString.length != 6 {return nil}
         
         let rString = (cString as NSString).substring(to: 2)
         let gString = ((cString as NSString).substring(from: 2) as NSString).substring(to: 2)
@@ -113,10 +111,10 @@ public extension UIColor {
     }
     
     public func toHex() -> String? {
-        var r:CGFloat = 0
-        var g:CGFloat = 0
-        var b:CGFloat = 0
-        var a:CGFloat = 0
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
         
         getRed(&r, green: &g, blue: &b, alpha: &a)
         
@@ -139,8 +137,6 @@ public extension UIColor {
     var hasLightContrast: Bool {
         let value = red*255*0.299 + green*255*0.587 + blue*255*0.114
         return value > 186
-//        let value = (round(red.toDouble()*255*299) + round(green.toDouble()*255*587) + round(blue.toDouble()*255*114))/1000
-//        return value >= 128.0
     }
     
     var hasDarkContrast: Bool {
