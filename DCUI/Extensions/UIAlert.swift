@@ -12,7 +12,8 @@ fileprivate func FindWindow() -> UIWindow? {
     var window: UIWindow?
     for item in UIApplication.shared.windows {
         if  !NSStringFromClass(item.classForCoder).contains("UIRemoteKeyboardWindow") &&
-            !NSStringFromClass(item.classForCoder).contains("_UIInteractiveHighlightEffectWindow") {
+            !NSStringFromClass(item.classForCoder).contains("_UIInteractiveHighlightEffectWindow") &&
+            !NSStringFromClass(item.classForCoder).contains("UITextEffectsWindow") {
             window = item
         }
     }
