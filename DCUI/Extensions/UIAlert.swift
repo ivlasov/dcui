@@ -26,7 +26,7 @@ public func ShowLocalizedAlert(text: String? = nil, inViewController: UIViewCont
         ctrl = FindWindow()?.rootViewController
     }
     if let ctrl = ctrl {
-        let alert = UIAlertController(title: title?.localized, message: text?.localized, preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: text?.localized, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "general.button.ok".localized, style: .cancel, handler: { _ in}))
         ctrl.present(alert, animated: true, completion: nil)
     }
