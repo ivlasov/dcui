@@ -20,26 +20,26 @@ fileprivate func FindWindow() -> UIWindow? {
     return window
 }
 
-public func ShowLocalizedAlert(title: String? = nil, text: String? = nil, inViewController: UIViewController? = nil) {
+public func ShowLocalizedAlert(text: String? = nil, inViewController: UIViewController? = nil) {
     var ctrl = inViewController
     if ctrl == nil {
         ctrl = FindWindow()?.rootViewController
     }
     if let ctrl = ctrl {
-        let alert = UIAlertController(title: title, message: text?.localized, preferredStyle: .alert)
+        let alert = UIAlertController(title: title?.localized, message: text?.localized, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "general.button.ok".localized, style: .cancel, handler: { _ in}))
         ctrl.present(alert, animated: true, completion: nil)
     }
     
 }
 
-public func ShowLocalizedAlert(title: String? = nil, text: String? = nil, cancel: String? = nil, style: UIAlertControllerStyle, actions: [UIAlertAction], inViewController: UIViewController? = nil) {
+public func ShowLocalizedAlert(title: String? = nil, text: String? = nil, cancel: String? = nil, style: UIAlertControllerStyle = .alert, actions: [UIAlertAction], inViewController: UIViewController? = nil) {
     var ctrl = inViewController
     if ctrl == nil {
         ctrl = FindWindow()?.rootViewController
     }
     if let ctrl = ctrl {
-        let alert = UIAlertController(title: title, message: text?.localized, preferredStyle: style)
+        let alert = UIAlertController(title: title?.localized, message: text?.localized, preferredStyle: style)
         var hasCancel = false
         for item in actions {
             if item.style == .cancel {
