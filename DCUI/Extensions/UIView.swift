@@ -14,12 +14,8 @@ public extension UIView {
     }
     
     @IBInspectable public var identifier: String? {
-        get {
-            return RuntimeGetAssociatedObject(self, key: &UIViewPrivate.identifier)
-        }
-        set {
-            RuntimeSetAssociatedObject(self, value: newValue, key: &UIViewPrivate.identifier)
-        }
+        get { return RuntimeGetAssociatedObject(self, key: &UIViewPrivate.identifier) }
+        set { RuntimeSetAssociatedObject(self, value: newValue, key: &UIViewPrivate.identifier) }
     }
     
     public func view<T:UIView>(identifier: String, type: T.Type? = nil) -> T? {
@@ -70,87 +66,53 @@ public extension UIView {
     }
     
     public var originX: CGFloat {
-        set {
-            frame = CGRect(x: newValue, y: originY, width: width, height: height)
-        }
-        get {
-            return frame.origin.x
-        }
+        set { frame = CGRect(x: newValue, y: originY, width: width, height: height) }
+        get { return frame.origin.x }
     }
     
     public var originY: CGFloat {
-        set {
-            frame = CGRect(x: originX, y: newValue, width: width, height: height)
-        }
-        get {
-            return frame.origin.y
-        }
+        set { frame = CGRect(x: originX, y: newValue, width: width, height: height) }
+        get { return frame.origin.y }
     }
     
     public var width: CGFloat {
-        set {
-            frame = CGRect(x: originX, y: originY, width: newValue, height: height)
-        }
-        get {
-            return frame.size.width
-        }
+        set { frame = CGRect(x: originX, y: originY, width: newValue, height: height) }
+        get { return frame.size.width }
     }
     
     public var height: CGFloat {
-        set {
-            frame = CGRect(x: originX, y: originY, width: width, height: newValue)
-        }
-        get {
-            return frame.size.height
-        }
+        set { frame = CGRect(x: originX, y: originY, width: width, height: newValue) }
+        get { return frame.size.height }
     }
     
     public var origin: CGPoint {
-        set {
-            frame = CGRect(x: newValue.x, y: newValue.y, width: width, height: height)
-        }
-        get {
-            return frame.origin
-        }
+        set { frame = CGRect(x: newValue.x, y: newValue.y, width: width, height: height) }
+        get { return frame.origin }
     }
     
     public var size: CGSize {
-        set {
-            frame = CGRect(x: originX, y: originY, width: newValue.width, height: newValue.height)
-        }
-        get {
-            return frame.size
-        }
+        set { frame = CGRect(x: originX, y: originY, width: newValue.width, height: newValue.height) }
+        get { return frame.size }
     }
     
-    @IBInspectable open var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
-        }
+    @IBInspectable public var cornerRadius: CGFloat {
+        get { return layer.cornerRadius }
+        set { layer.cornerRadius = newValue }
     }
     
-    @IBInspectable open var borderWidth: CGFloat {
-        get {
-            return layer.borderWidth
-        }
-        set {
-            layer.borderWidth = newValue
-        }
+    @IBInspectable public var borderWidth: CGFloat {
+        get { return layer.borderWidth }
+        set { layer.borderWidth = newValue }
     }
     
-    @IBInspectable open var borderColor: UIColor? {
+    @IBInspectable public var borderColor: UIColor? {
         get {
             if let color = layer.borderColor {
                 return UIColor(cgColor: color)
             }
             return nil
         }
-        set {
-            layer.borderColor = newValue?.cgColor
-        }
+        set { layer.borderColor = newValue?.cgColor }
     }
     
     public func snapshot(frame: CGRect = CGRect.zero) -> UIImage? {
