@@ -95,26 +95,6 @@ public extension UIView {
         get { return frame.size }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat {
-        get { return layer.cornerRadius }
-        set { layer.cornerRadius = newValue }
-    }
-    
-    @IBInspectable public var borderWidth: CGFloat {
-        get { return layer.borderWidth }
-        set { layer.borderWidth = newValue }
-    }
-    
-    @IBInspectable public var borderColor: UIColor? {
-        get {
-            if let color = layer.borderColor {
-                return UIColor(cgColor: color)
-            }
-            return nil
-        }
-        set { layer.borderColor = newValue?.cgColor }
-    }
-    
     public func snapshot(frame: CGRect = CGRect.zero) -> UIImage? {
         var frame = frame
         if frame == CGRect.zero {
@@ -145,4 +125,28 @@ public func << (lhs: UIView?, rhs: UIView?) {
     if let rhs = rhs {
         lhs.addSubview(rhs)
     }
+}
+
+extension UIView {
+    
+    @IBInspectable open var cornerRadius: CGFloat {
+        get { return layer.cornerRadius }
+        set { layer.cornerRadius = newValue }
+    }
+    
+    @IBInspectable open var borderWidth: CGFloat {
+        get { return layer.borderWidth }
+        set { layer.borderWidth = newValue }
+    }
+    
+    @IBInspectable open var borderColor: UIColor? {
+        get {
+            if let color = layer.borderColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set { layer.borderColor = newValue?.cgColor }
+    }
+    
 }
