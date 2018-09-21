@@ -12,7 +12,7 @@ open class Style {
     
     static fileprivate var styles = [Style]()
     
-    open static func preload(path: String) {
+    public static func preload(path: String) {
         guard let info = NSDictionary(contentsOfFile: path) as? [String:AnyObject] else {return}
         styles = []
         guard let list = info["items"] as? [[String:AnyObject]] else {return}
@@ -22,7 +22,7 @@ open class Style {
         UIApplication.shared.applyStyle()
     }
     
-    open static func `for`(object: NSObject) -> Style? {
+    public static func `for`(object: NSObject) -> Style? {
         if let name = object.styleName {
             for item in styles {
                 if item.name == name {

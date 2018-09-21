@@ -64,7 +64,7 @@ class TransitionController: NSObject, UIViewControllerTransitioningDelegate {
     var defaultAnimation: String?
     var currentAnimation: String?
     
-    func navigationAnimation(_ operation: UINavigationControllerOperation) -> TransitionAnimation? {
+    func navigationAnimation(_ operation: UINavigationController.Operation) -> TransitionAnimation? {
         if let animation = TransitionAnimation.animationForKey(currentAnimation) {
             currentAnimation = nil
             animation.navigationOperation = operation

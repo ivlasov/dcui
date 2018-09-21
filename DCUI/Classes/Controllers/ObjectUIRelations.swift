@@ -154,7 +154,7 @@ open class ObjectUIRelations: NSObject {
             view.addTarget(self, action: #selector(ObjectUIRelations.onSwitch(_:)), for: .valueChanged)
             connected = true
         } else if let view = view as? UITextField {
-            NotificationAdd(observer: self, selector: #selector(ObjectUIRelations.onTextField(_:)), name: Notification.Name.UITextFieldTextDidChange.rawValue, object: view)
+            NotificationAdd(observer: self, selector: #selector(ObjectUIRelations.onTextField(_:)), name: UITextField.textDidChangeNotification.rawValue, object: view)
             connected = true
         } else if let view = view as? UISegmentedControl {
             view.addTarget(self, action: #selector(ObjectUIRelations.onSegmentedControl(_:)), for: .valueChanged)
@@ -172,7 +172,7 @@ open class ObjectUIRelations: NSObject {
         if let view = view as? UISwitch {
             view.removeTarget(self, action: #selector(ObjectUIRelations.onSwitch(_:)), for: .valueChanged)
         } else if let view = view as? UITextField {
-            NotificationRemove(observer: self, name: Notification.Name.UITextFieldTextDidChange.rawValue, object: view)
+            NotificationRemove(observer: self, name: UITextField.textDidChangeNotification.rawValue, object: view)
         } else if let view = view as? UISegmentedControl {
             view.removeTarget(self, action: #selector(ObjectUIRelations.onSegmentedControl(_:)), for: .valueChanged)
         }

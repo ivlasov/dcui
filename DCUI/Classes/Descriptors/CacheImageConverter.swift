@@ -6,7 +6,7 @@
 //  Copyright © 2016 Igor Danich. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public class CacheImageConverter: CacheConverter {
     
@@ -37,9 +37,9 @@ public class CacheImageConverter: CacheConverter {
         guard let object = object as? UIImage else {return nil}
         switch type {
         case .PNG:
-            return UIImagePNGRepresentation(object)
+            return object.pngData()
         case .JPEG:
-            return UIImageJPEGRepresentation(object, 1)
+            return object.jpegData(compressionQuality: 1)
         }
     }
     

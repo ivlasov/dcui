@@ -11,8 +11,8 @@ import UIKit
 public extension UIApplication {
     
     func openSettings() {
-        if let url = URL(string: UIApplicationOpenSettingsURLString) {
-            openURL(url)
+        if let url = URL(string: UIApplication.openSettingsURLString) {
+            open(url)
         }
     }
     

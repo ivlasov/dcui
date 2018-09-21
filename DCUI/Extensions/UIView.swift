@@ -173,7 +173,7 @@ extension UIView {
         pulseAnimation.duration = duration
         pulseAnimation.fromValue = 0
         pulseAnimation.toValue = 1
-        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = Float.greatestFiniteMagnitude
         pulseAnimation.isRemovedOnCompletion = false

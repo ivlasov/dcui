@@ -29,6 +29,7 @@ public enum ContentMode {
 public extension Point {
     
     public init(point: CGPoint) {
+        self.init()
         x = Double(point.x)
         y = Double(point.y)
     }
@@ -42,6 +43,7 @@ public extension Point {
 public extension Size {
     
     public init(size: CGSize) {
+        self.init()
         width = size.width.toDouble()
         height = size.height.toDouble()
     }
@@ -55,6 +57,7 @@ public extension Size {
 public extension Rect {
     
     public init(rect: CGRect) {
+        self.init()
         origin = Point(Double(rect.origin.x), Double(rect.origin.y))
         size = Size()
     }

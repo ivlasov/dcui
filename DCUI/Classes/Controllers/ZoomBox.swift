@@ -107,7 +107,7 @@ open class ZoomBox: NSObject {
             blurKey = nil
             return
         }
-        blurKey = UIImageJPEGRepresentation(image, 0.2)?.base64EncodedString(options: .lineLength64Characters).MD5
+        blurKey = image.jpegData(compressionQuality: 0.2)?.base64EncodedString(options: .lineLength64Characters).MD5
         guard blurKey != nil else {return}
         if cacheItem(0) == nil {
             for i in 0...numberOfBlurFrames {

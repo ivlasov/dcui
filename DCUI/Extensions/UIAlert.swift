@@ -33,7 +33,7 @@ public func ShowLocalizedAlert(text: String? = nil, inViewController: UIViewCont
     
 }
 
-public func ShowLocalizedAlert(title: String? = nil, text: String? = nil, cancel: String? = nil, style: UIAlertControllerStyle = .alert, actions: [UIAlertAction], inViewController: UIViewController? = nil) {
+public func ShowLocalizedAlert(title: String? = nil, text: String? = nil, cancel: String? = nil, style: UIAlertController.Style = .alert, actions: [UIAlertAction], inViewController: UIViewController? = nil) {
     var ctrl = inViewController
     if ctrl == nil {
         ctrl = FindWindow()?.rootViewController

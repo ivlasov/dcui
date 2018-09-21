@@ -44,7 +44,7 @@ public extension UIBarButtonItem {
     public convenience init(text: String?, font: UIFont? = nil, image: UIImage?, handler: ((UIBarButtonItem) -> Void)?) {
         let btn = UIButton(type: .custom)
         if let text = text {
-            var attrs = [NSAttributedStringKey:Any]()
+            var attrs = [NSAttributedString.Key:Any]()
 //            attrs << UIBarButtonItem.appearance().titleTextAttributes(for: .normal)
             if let font = font {
                 attrs[.font] = font

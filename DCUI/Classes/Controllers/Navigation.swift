@@ -82,7 +82,7 @@ open class Navigation: NSObject, UINavigationControllerDelegate {
 
     open func navigationController(
         _ navigationController: UINavigationController,
-        animationControllerFor operation: UINavigationControllerOperation,
+        animationControllerFor operation: UINavigationController.Operation,
         from fromVC: UIViewController,
         to toVC: UIViewController
         ) -> UIViewControllerAnimatedTransitioning? {

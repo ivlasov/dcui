@@ -95,7 +95,7 @@ public extension UIViewController {
         item.localize()
         tabBarItem = item
         
-        childViewControllers.forEach { ctrl in
+        children.forEach { ctrl in
             ctrl.localize()
         }
         navigationItem.leftBarButtonItem?.localize()
@@ -268,7 +268,7 @@ public extension UIButton {
     
     override func localize() {
         if let title = localizedTitle {
-            setTitle(title.localized, for: UIControlState())
+            setTitle(title.localized, for: UIControl.State())
         }
     }
     

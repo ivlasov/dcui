@@ -15,7 +15,7 @@ public extension UITableViewCell {
     }
     
     public convenience init(reuseIdentifier: String?) {
-        self.init(style: UITableViewCellStyle.default, reuseIdentifier: reuseIdentifier)
+        self.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: reuseIdentifier)
     }
         
     public class func cellHeight() -> CGFloat {

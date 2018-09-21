@@ -11,22 +11,22 @@ import UIKit
 @IBDesignable open class ColoredButton: UIButton {
     
     @IBInspectable var color: UIColor? {
-        get {return color(for: UIControlState())}
-        set {set(color: newValue, forState: UIControlState())}
+        get {return color(for: UIControl.State())}
+        set {set(color: newValue, forState: UIControl.State())}
     }
     
     @IBInspectable var highlightedColor: UIColor? {
-        get {return color(for: UIControlState())}
+        get {return color(for: UIControl.State())}
         set {set(color: newValue, forState: .highlighted)}
     }
     
     @IBInspectable var disabledColor: UIColor? {
-        get {return color(for: UIControlState())}
+        get {return color(for: UIControl.State())}
         set {set(color: newValue, forState: .disabled)}
     }
     
     @IBInspectable var selectedColor: UIColor? {
-        get {return color(for: UIControlState())}
+        get {return color(for: UIControl.State())}
         set {set(color: newValue, forState: .selected)}
     }
     
@@ -63,11 +63,11 @@ import UIKit
     fileprivate var lastSize: CGSize?
     
     fileprivate func updateButtonColor() {
-        if color(for: UIControlState()) == nil {
-            set(color: UIColor.clear, forState: UIControlState())
+        if color(for: UIControl.State()) == nil {
+            set(color: UIColor.clear, forState: UIControl.State())
         }
         for (stateIndex,color) in buttonColorStates {
-            let state = UIControlState(rawValue: stateIndex)
+            let state = UIControl.State(rawValue: stateIndex)
             var exists = false
             if let value = buttonImagesStates[stateIndex] {
                 exists = value
@@ -88,16 +88,16 @@ import UIKit
         }
     }
     
-    open func set(color: UIColor?, forState state: UIControlState) {
+    open func set(color: UIColor?, forState state: UIControl.State) {
         buttonColorStates[state.rawValue] = color
         updateButtonColor()
     }
     
-    open func color(for state: UIControlState) -> UIColor? {
+    open func color(for state: UIControl.State) -> UIColor? {
         return buttonColorStates[state.rawValue]
     }
     
-    override open func setBackgroundImage(_ image: UIImage?, for state: UIControlState) {
+    override open func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) {
         buttonImagesStates[state.rawValue] = (image != nil)
         super.setBackgroundImage(image, for: state)
     }

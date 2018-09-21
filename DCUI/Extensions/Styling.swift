@@ -77,7 +77,7 @@ public extension UIViewController {
     override func applyStyle() {
         super.applyStyle()
         view.applyStyle()
-        childViewControllers.forEach { ctrl in
+        children.forEach { ctrl in
             ctrl.applyStyle()
         }
     }

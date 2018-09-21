@@ -24,7 +24,7 @@ open class LoadingViewController: UIViewController {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        indicator = UIActivityIndicatorView(style: .whiteLarge)
         indicator.startAnimating()
         view.addSubview(indicator)
         view.backgroundColor = UIColor.black.withAlphaComponent(0.7)

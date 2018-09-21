@@ -158,7 +158,7 @@ public extension UIImage {
     }
     
     func save(path: String) {
-        try? UIImagePNGRepresentation(self)?.write(to: URL(fileURLWithPath: path), options: [.atomic])
+        try? pngData()?.write(to: URL(fileURLWithPath: path), options: [.atomic])
     }
     
     func convertToGrayScale() -> UIImage? {
@@ -205,10 +205,10 @@ public func UIImageNamed(_ name: String?) -> UIImage? {
     return nil
 }
 
-public func UIImageNamedResizable(_ name: String, insets: UIEdgeInsets = UIEdgeInsets.zero, mode: UIImageResizingMode = .tile) -> UIImage? {
+public func UIImageNamedResizable(_ name: String, insets: UIEdgeInsets = UIEdgeInsets.zero, mode: UIImage.ResizingMode = .tile) -> UIImage? {
     return UIImageNamed(name)?.resizableImage(withCapInsets: insets, resizingMode: mode)
 }
 
-public func UIImageNamedRendering(_ name: String, mode: UIImageRenderingMode) -> UIImage? {
+public func UIImageNamedRendering(_ name: String, mode: UIImage.RenderingMode) -> UIImage? {
     return UIImageNamed(name)?.withRenderingMode(mode)
 }

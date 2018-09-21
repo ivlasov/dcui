@@ -35,7 +35,7 @@ open class TransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning 
         TransitionFade()
     ]
     
-    open static func registerAnimation(_ animation: TransitionAnimation) {
+    public static func registerAnimation(_ animation: TransitionAnimation) {
         transitionAnimations << animation
     }
     
@@ -64,7 +64,7 @@ open class TransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning 
     
     open var type = AnimationType.push
     
-    open var navigationOperation: UINavigationControllerOperation {
+    open var navigationOperation: UINavigationController.Operation {
         get {
             switch type {
             case .push: return .push
