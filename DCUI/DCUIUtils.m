@@ -1,9 +1,5 @@
 //
-//  MPUIUtils.m
-//  MPUI
-//
-//  Created by Igor Danich on 19.01.16.
-//  Copyright © 2016 dclife. All rights reserved.
+//  DCUI
 //
 
 #import "DCUIUtils.h"

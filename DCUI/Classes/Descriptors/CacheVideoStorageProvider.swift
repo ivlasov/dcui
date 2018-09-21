@@ -1,9 +1,5 @@
 //
-//  CacheVideoStorage.swift
-//  MPUI
-//
-//  Created by Igor Danich on 27/11/2016.
-//  Copyright © 2016 Igor Danich. All rights reserved.
+//  DCUI
 //
 
 import DCFoundation

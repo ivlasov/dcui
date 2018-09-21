@@ -1,9 +1,5 @@
 //
-//  QRCode.swift
-//  TX2
-//
-//  Created by Zilvinas Sebeika on 13/05/16.
-//  Copyright © 2016 dclife. All rights reserved.
+//  DCUI
 //
 
 import Foundation

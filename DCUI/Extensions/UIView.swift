@@ -1,15 +1,11 @@
 //
-//  UIView.swift
-//  MPUI
-//
-//  Created by Igor Danich on 07.01.16.
-//  Copyright © 2016 Igor Danich. All rights reserved.
+//  DCUI
 //
 
 import UIKit
 import DCFoundation
 
-extension UIView {
+public extension UIView {
 
     
     fileprivate struct UIViewPrivate {

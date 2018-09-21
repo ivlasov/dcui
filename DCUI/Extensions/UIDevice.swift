@@ -1,9 +1,5 @@
 //
-//  UIDevice.swift
-//  MPUI
-//
-//  Created by Igor Danich on 04/11/2016.
-//  Copyright © 2016 Igor Danich. All rights reserved.
+//  DCUI
 //
 
 import Foundation

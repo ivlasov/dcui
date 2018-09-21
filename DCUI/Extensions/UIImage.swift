@@ -1,9 +1,5 @@
 //
-//  UIImage.swift
-//  MPUI
-//
-//  Created by Igor Danich on 07.01.16.
-//  Copyright © 2016 Igor Danich. All rights reserved.
+//  DCUI
 //
 
 import UIKit
@@ -128,11 +124,11 @@ public extension UIImage {
         static var imageColors = "imageColors"
     }
     
-    func imageScaledToMaxSize(_ maxSize: CGSize) -> UIImage? {
+    public func imageScaledToMaxSize(_ maxSize: CGSize) -> UIImage? {
         return imageScaledToSize(frameToFitIn(maxSize, contentMode: .aspectFill).size)
     }
     
-    func averageColor(_ frame: CGRect? = nil) -> UIColor? {
+    public func averageColor(_ frame: CGRect? = nil) -> UIColor? {
         var image = self
         if let frame = frame {
             image = image.imageBy(clipping: frame)!
@@ -149,7 +145,7 @@ public extension UIImage {
         }
     }
     
-    func imageBy(clipping frame: CGRect) -> UIImage? {
+    public func imageBy(clipping frame: CGRect) -> UIImage? {
         guard frame.size.width > 0 && frame.size.height > 0 else {return nil}
         return UIImage.draw(size: frame.size) { _,context in
             context.translateBy(x: -frame.origin.x, y: -frame.origin.y)
@@ -157,11 +153,11 @@ public extension UIImage {
         }
     }
     
-    func save(path: String) {
+    public func save(path: String) {
         try? pngData()?.write(to: URL(fileURLWithPath: path), options: [.atomic])
     }
     
-    func convertToGrayScale() -> UIImage? {
+    public func convertToGrayScale() -> UIImage? {
         let imageRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         let colorSpace = CGColorSpaceCreateDeviceGray()
         let context = CGContext(data: nil, width: Int(size.width), height: Int(size.height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: CGImageAlphaInfo.none.rawValue)
@@ -171,7 +167,7 @@ public extension UIImage {
         return newImage
     }
     
-    static func draw(size: CGSize, scale: CGFloat = UIScreen.main.scale, _ handler: ((CGSize, CGContext) -> Void)) -> UIImage {
+    public static func draw(size: CGSize, scale: CGFloat = UIScreen.main.scale, _ handler: ((CGSize, CGContext) -> Void)) -> UIImage {
         var size = size
         if size.width == 0 {
             size.width = 1
@@ -192,7 +188,7 @@ public extension UIImage {
 
 public extension String {
     
-    func toUIImage() -> UIImage? {
+    public func toUIImage() -> UIImage? {
         return UIImage(named: self)
     }
     

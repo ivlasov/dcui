@@ -13,7 +13,7 @@ public struct KeyboardInfo {
     let duration        : TimeInterval
 }
 
-extension KeyboardInfo {
+public extension KeyboardInfo {
     
     init(notification: NSNotification) {
         frameBegin      = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero

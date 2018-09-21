@@ -1,9 +1,5 @@
 //
-//  Localizations.swift
-//  MPUI
-//
-//  Created by Igor on 08.12.15.
-//  Copyright © 2015 dclife. All rights reserved.
+//  DCUI
 //
 
 import UIKit

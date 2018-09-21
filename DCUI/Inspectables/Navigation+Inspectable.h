@@ -1,9 +1,5 @@
 //
-//  UINavigation+UIViewController.h
-//  MPLibrary
-//
-//  Created by Igor Danich on 12.08.16.
-//  Copyright © 2016 dclife. All rights reserved.
+//  DCUI
 //
 
 #import <MPUI/MPUI.h>

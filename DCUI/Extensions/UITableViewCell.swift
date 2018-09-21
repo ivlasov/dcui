@@ -1,9 +1,5 @@
 //
-//  UITableViewCell.swift
-//  TX2
-//
-//  Created by Igor Danich on 27.01.16.
-//  Copyright © 2016 dclife. All rights reserved.
+//  DCUI
 //
 
 import Foundation

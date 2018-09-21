@@ -10,50 +10,50 @@
 		781EFDD32154D90E00B70CE7 /* DCUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDD12154D90E00B70CE7 /* DCUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		781EFDD62154D90E00B70CE7 /* DCUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781EFDCF2154D90E00B70CE7 /* DCUI.framework */; };
 		781EFDD72154D90E00B70CE7 /* DCUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 781EFDCF2154D90E00B70CE7 /* DCUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		781EFE0E2154D93F00B70CE7 /* DCUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDDB2154D93E00B70CE7 /* DCUIUtils.m */; };
 		781EFE0F2154D93F00B70CE7 /* DCUIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDDC2154D93E00B70CE7 /* DCUIUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		781EFE102154D93F00B70CE7 /* TransitionController+Inspectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDDE2154D93E00B70CE7 /* TransitionController+Inspectable.h */; };
-		781EFE112154D93F00B70CE7 /* Button+Inspectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDDF2154D93E00B70CE7 /* Button+Inspectable.h */; };
-		781EFE122154D93F00B70CE7 /* UIView+Inspectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDE02154D93E00B70CE7 /* UIView+Inspectable.h */; };
-		781EFE132154D93F00B70CE7 /* Navigation+Inspectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDE12154D93E00B70CE7 /* Navigation+Inspectable.h */; };
-		781EFE142154D93F00B70CE7 /* Localizations.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDE22154D93E00B70CE7 /* Localizations.h */; };
-		781EFE152154D93F00B70CE7 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE52154D93E00B70CE7 /* Geometry.swift */; };
-		781EFE162154D93F00B70CE7 /* CacheVideoConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE62154D93E00B70CE7 /* CacheVideoConverter.swift */; };
-		781EFE172154D93F00B70CE7 /* CacheVideoStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE72154D93E00B70CE7 /* CacheVideoStorageProvider.swift */; };
-		781EFE182154D93F00B70CE7 /* CacheImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE82154D93E00B70CE7 /* CacheImageConverter.swift */; };
-		781EFE192154D93F00B70CE7 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE92154D93E00B70CE7 /* Gradient.swift */; };
-		781EFE1A2154D93F00B70CE7 /* NIBExternalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDEA2154D93E00B70CE7 /* NIBExternalItem.swift */; };
-		781EFE1B2154D93F00B70CE7 /* ZoomBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDEC2154D93E00B70CE7 /* ZoomBox.swift */; };
-		781EFE1C2154D93F00B70CE7 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDED2154D93E00B70CE7 /* Navigation.swift */; };
-		781EFE1D2154D93F00B70CE7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDEE2154D93E00B70CE7 /* Style.swift */; };
-		781EFE1E2154D93F00B70CE7 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDEF2154D93E00B70CE7 /* QRCode.swift */; };
-		781EFE1F2154D93F00B70CE7 /* UIViewCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF02154D93E00B70CE7 /* UIViewCache.swift */; };
-		781EFE202154D93F00B70CE7 /* ObjectUIRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF12154D93E00B70CE7 /* ObjectUIRelations.swift */; };
-		781EFE212154D93F00B70CE7 /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF32154D93E00B70CE7 /* TransitionController.swift */; };
-		781EFE222154D93F00B70CE7 /* TransitionFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF52154D93E00B70CE7 /* TransitionFade.swift */; };
-		781EFE232154D93F00B70CE7 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF62154D93E00B70CE7 /* TransitionAnimation.swift */; };
-		781EFE242154D93F00B70CE7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF72154D93E00B70CE7 /* LoadingViewController.swift */; };
-		781EFE252154D93F00B70CE7 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF92154D93E00B70CE7 /* View.swift */; };
-		781EFE262154D93F00B70CE7 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFA2154D93E00B70CE7 /* Button.swift */; };
-		781EFE272154D93F00B70CE7 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFB2154D93E00B70CE7 /* ColoredButton.swift */; };
-		781EFE282154D93F00B70CE7 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFD2154D93F00B70CE7 /* UIView.swift */; };
-		781EFE292154D93F00B70CE7 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFE2154D93F00B70CE7 /* Styling.swift */; };
-		781EFE2A2154D93F00B70CE7 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFF2154D93F00B70CE7 /* Localizations.swift */; };
-		781EFE2B2154D93F00B70CE7 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE002154D93F00B70CE7 /* UIBarButtonItem.swift */; };
-		781EFE2C2154D93F00B70CE7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE012154D93F00B70CE7 /* UIColor.swift */; };
-		781EFE2D2154D93F00B70CE7 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE022154D93F00B70CE7 /* Number.swift */; };
-		781EFE2E2154D93F00B70CE7 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE032154D93F00B70CE7 /* UICollectionView.swift */; };
-		781EFE2F2154D93F00B70CE7 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE042154D93F00B70CE7 /* Operators.swift */; };
-		781EFE302154D93F00B70CE7 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE052154D93F00B70CE7 /* UITableView.swift */; };
-		781EFE312154D93F00B70CE7 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE062154D93F00B70CE7 /* UIDevice.swift */; };
-		781EFE322154D93F00B70CE7 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE072154D93F00B70CE7 /* UIBezierPath.swift */; };
-		781EFE332154D93F00B70CE7 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE082154D93F00B70CE7 /* UITableViewCell.swift */; };
-		781EFE342154D93F00B70CE7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE092154D93F00B70CE7 /* UIImage.swift */; };
-		781EFE352154D93F00B70CE7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE0A2154D93F00B70CE7 /* UIViewController.swift */; };
-		781EFE362154D93F00B70CE7 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE0B2154D93F00B70CE7 /* UINavigationBar.swift */; };
-		781EFE372154D93F00B70CE7 /* UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE0C2154D93F00B70CE7 /* UIAlert.swift */; };
-		781EFE382154D93F00B70CE7 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE0D2154D93F00B70CE7 /* UIApplication.swift */; };
+		781EFE102154D93F00B70CE7 /* TransitionController+Inspectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDDE2154D93E00B70CE7 /* TransitionController+Inspectable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		781EFE112154D93F00B70CE7 /* Button+Inspectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDDF2154D93E00B70CE7 /* Button+Inspectable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		781EFE122154D93F00B70CE7 /* UIView+Inspectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDE02154D93E00B70CE7 /* UIView+Inspectable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		781EFE132154D93F00B70CE7 /* Navigation+Inspectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDE12154D93E00B70CE7 /* Navigation+Inspectable.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		781EFE142154D93F00B70CE7 /* Localizations.h in Headers */ = {isa = PBXBuildFile; fileRef = 781EFDE22154D93E00B70CE7 /* Localizations.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		781EFE3D2154DA6F00B70CE7 /* DCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781EFE3C2154DA6E00B70CE7 /* DCFoundation.framework */; };
+		781EFE3E2154E56900B70CE7 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE52154D93E00B70CE7 /* Geometry.swift */; };
+		781EFE3F2154E56900B70CE7 /* CacheVideoConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE62154D93E00B70CE7 /* CacheVideoConverter.swift */; };
+		781EFE402154E56900B70CE7 /* CacheVideoStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE72154D93E00B70CE7 /* CacheVideoStorageProvider.swift */; };
+		781EFE412154E56900B70CE7 /* CacheImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE82154D93E00B70CE7 /* CacheImageConverter.swift */; };
+		781EFE422154E56900B70CE7 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDE92154D93E00B70CE7 /* Gradient.swift */; };
+		781EFE432154E56900B70CE7 /* NIBExternalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDEA2154D93E00B70CE7 /* NIBExternalItem.swift */; };
+		781EFE442154E56900B70CE7 /* ZoomBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDEC2154D93E00B70CE7 /* ZoomBox.swift */; };
+		781EFE452154E56900B70CE7 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDED2154D93E00B70CE7 /* Navigation.swift */; };
+		781EFE462154E56900B70CE7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDEE2154D93E00B70CE7 /* Style.swift */; };
+		781EFE472154E56900B70CE7 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDEF2154D93E00B70CE7 /* QRCode.swift */; };
+		781EFE482154E56900B70CE7 /* UIViewCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF02154D93E00B70CE7 /* UIViewCache.swift */; };
+		781EFE492154E56900B70CE7 /* ObjectUIRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF12154D93E00B70CE7 /* ObjectUIRelations.swift */; };
+		781EFE4A2154E56900B70CE7 /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF32154D93E00B70CE7 /* TransitionController.swift */; };
+		781EFE4B2154E56900B70CE7 /* TransitionFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF52154D93E00B70CE7 /* TransitionFade.swift */; };
+		781EFE4C2154E56900B70CE7 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF62154D93E00B70CE7 /* TransitionAnimation.swift */; };
+		781EFE4D2154E56900B70CE7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF72154D93E00B70CE7 /* LoadingViewController.swift */; };
+		781EFE4E2154E56900B70CE7 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDF92154D93E00B70CE7 /* View.swift */; };
+		781EFE4F2154E56900B70CE7 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFA2154D93E00B70CE7 /* Button.swift */; };
+		781EFE502154E56900B70CE7 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFB2154D93E00B70CE7 /* ColoredButton.swift */; };
+		781EFE512154E56900B70CE7 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFD2154D93F00B70CE7 /* UIView.swift */; };
+		781EFE522154E56900B70CE7 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFE2154D93F00B70CE7 /* Styling.swift */; };
+		781EFE532154E56900B70CE7 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDFF2154D93F00B70CE7 /* Localizations.swift */; };
+		781EFE542154E56900B70CE7 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE002154D93F00B70CE7 /* UIBarButtonItem.swift */; };
+		781EFE552154E56900B70CE7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE012154D93F00B70CE7 /* UIColor.swift */; };
+		781EFE562154E56900B70CE7 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE022154D93F00B70CE7 /* Number.swift */; };
+		781EFE572154E56900B70CE7 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE032154D93F00B70CE7 /* UICollectionView.swift */; };
+		781EFE582154E56900B70CE7 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE042154D93F00B70CE7 /* Operators.swift */; };
+		781EFE592154E56900B70CE7 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE052154D93F00B70CE7 /* UITableView.swift */; };
+		781EFE5A2154E56900B70CE7 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE062154D93F00B70CE7 /* UIDevice.swift */; };
+		781EFE5B2154E56900B70CE7 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE072154D93F00B70CE7 /* UIBezierPath.swift */; };
+		781EFE5C2154E56900B70CE7 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE082154D93F00B70CE7 /* UITableViewCell.swift */; };
+		781EFE5D2154E56900B70CE7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE092154D93F00B70CE7 /* UIImage.swift */; };
+		781EFE5E2154E56900B70CE7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE0A2154D93F00B70CE7 /* UIViewController.swift */; };
+		781EFE5F2154E56900B70CE7 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE0B2154D93F00B70CE7 /* UINavigationBar.swift */; };
+		781EFE602154E56900B70CE7 /* UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE0C2154D93F00B70CE7 /* UIAlert.swift */; };
+		781EFE612154E56900B70CE7 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EFE0D2154D93F00B70CE7 /* UIApplication.swift */; };
+		781EFE622154E5EA00B70CE7 /* DCUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 781EFDDB2154D93E00B70CE7 /* DCUIUtils.m */; };
 		784B2E701F41A26D00E1632B /* NavigateViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B2E6F1F41A26D00E1632B /* NavigateViewController2.swift */; };
 		784B2E721F41A29800E1632B /* NavigateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784B2E711F41A29800E1632B /* NavigateViewController.swift */; };
 		789DB39E1DC0BB9300322B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DB39D1DC0BB9300322B9E /* AppDelegate.swift */; };
@@ -456,43 +456,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781EFE1A2154D93F00B70CE7 /* NIBExternalItem.swift in Sources */,
-				781EFE182154D93F00B70CE7 /* CacheImageConverter.swift in Sources */,
-				781EFE242154D93F00B70CE7 /* LoadingViewController.swift in Sources */,
-				781EFE0E2154D93F00B70CE7 /* DCUIUtils.m in Sources */,
-				781EFE362154D93F00B70CE7 /* UINavigationBar.swift in Sources */,
-				781EFE172154D93F00B70CE7 /* CacheVideoStorageProvider.swift in Sources */,
-				781EFE262154D93F00B70CE7 /* Button.swift in Sources */,
-				781EFE2D2154D93F00B70CE7 /* Number.swift in Sources */,
-				781EFE2A2154D93F00B70CE7 /* Localizations.swift in Sources */,
-				781EFE352154D93F00B70CE7 /* UIViewController.swift in Sources */,
-				781EFE212154D93F00B70CE7 /* TransitionController.swift in Sources */,
-				781EFE2F2154D93F00B70CE7 /* Operators.swift in Sources */,
-				781EFE162154D93F00B70CE7 /* CacheVideoConverter.swift in Sources */,
-				781EFE1F2154D93F00B70CE7 /* UIViewCache.swift in Sources */,
-				781EFE342154D93F00B70CE7 /* UIImage.swift in Sources */,
-				781EFE202154D93F00B70CE7 /* ObjectUIRelations.swift in Sources */,
-				781EFE2E2154D93F00B70CE7 /* UICollectionView.swift in Sources */,
-				781EFE382154D93F00B70CE7 /* UIApplication.swift in Sources */,
-				781EFE322154D93F00B70CE7 /* UIBezierPath.swift in Sources */,
-				781EFE292154D93F00B70CE7 /* Styling.swift in Sources */,
-				781EFE282154D93F00B70CE7 /* UIView.swift in Sources */,
-				781EFE332154D93F00B70CE7 /* UITableViewCell.swift in Sources */,
-				781EFE272154D93F00B70CE7 /* ColoredButton.swift in Sources */,
-				781EFE222154D93F00B70CE7 /* TransitionFade.swift in Sources */,
-				781EFE1E2154D93F00B70CE7 /* QRCode.swift in Sources */,
-				781EFE152154D93F00B70CE7 /* Geometry.swift in Sources */,
-				781EFE1C2154D93F00B70CE7 /* Navigation.swift in Sources */,
-				781EFE1B2154D93F00B70CE7 /* ZoomBox.swift in Sources */,
-				781EFE302154D93F00B70CE7 /* UITableView.swift in Sources */,
-				781EFE2C2154D93F00B70CE7 /* UIColor.swift in Sources */,
-				781EFE252154D93F00B70CE7 /* View.swift in Sources */,
-				781EFE372154D93F00B70CE7 /* UIAlert.swift in Sources */,
-				781EFE312154D93F00B70CE7 /* UIDevice.swift in Sources */,
-				781EFE192154D93F00B70CE7 /* Gradient.swift in Sources */,
-				781EFE1D2154D93F00B70CE7 /* Style.swift in Sources */,
-				781EFE2B2154D93F00B70CE7 /* UIBarButtonItem.swift in Sources */,
-				781EFE232154D93F00B70CE7 /* TransitionAnimation.swift in Sources */,
+				781EFE3E2154E56900B70CE7 /* Geometry.swift in Sources */,
+				781EFE3F2154E56900B70CE7 /* CacheVideoConverter.swift in Sources */,
+				781EFE402154E56900B70CE7 /* CacheVideoStorageProvider.swift in Sources */,
+				781EFE412154E56900B70CE7 /* CacheImageConverter.swift in Sources */,
+				781EFE422154E56900B70CE7 /* Gradient.swift in Sources */,
+				781EFE432154E56900B70CE7 /* NIBExternalItem.swift in Sources */,
+				781EFE442154E56900B70CE7 /* ZoomBox.swift in Sources */,
+				781EFE452154E56900B70CE7 /* Navigation.swift in Sources */,
+				781EFE462154E56900B70CE7 /* Style.swift in Sources */,
+				781EFE472154E56900B70CE7 /* QRCode.swift in Sources */,
+				781EFE482154E56900B70CE7 /* UIViewCache.swift in Sources */,
+				781EFE492154E56900B70CE7 /* ObjectUIRelations.swift in Sources */,
+				781EFE4A2154E56900B70CE7 /* TransitionController.swift in Sources */,
+				781EFE4B2154E56900B70CE7 /* TransitionFade.swift in Sources */,
+				781EFE4C2154E56900B70CE7 /* TransitionAnimation.swift in Sources */,
+				781EFE4D2154E56900B70CE7 /* LoadingViewController.swift in Sources */,
+				781EFE4E2154E56900B70CE7 /* View.swift in Sources */,
+				781EFE4F2154E56900B70CE7 /* Button.swift in Sources */,
+				781EFE502154E56900B70CE7 /* ColoredButton.swift in Sources */,
+				781EFE512154E56900B70CE7 /* UIView.swift in Sources */,
+				781EFE522154E56900B70CE7 /* Styling.swift in Sources */,
+				781EFE532154E56900B70CE7 /* Localizations.swift in Sources */,
+				781EFE542154E56900B70CE7 /* UIBarButtonItem.swift in Sources */,
+				781EFE622154E5EA00B70CE7 /* DCUIUtils.m in Sources */,
+				781EFE552154E56900B70CE7 /* UIColor.swift in Sources */,
+				781EFE562154E56900B70CE7 /* Number.swift in Sources */,
+				781EFE572154E56900B70CE7 /* UICollectionView.swift in Sources */,
+				781EFE582154E56900B70CE7 /* Operators.swift in Sources */,
+				781EFE592154E56900B70CE7 /* UITableView.swift in Sources */,
+				781EFE5A2154E56900B70CE7 /* UIDevice.swift in Sources */,
+				781EFE5B2154E56900B70CE7 /* UIBezierPath.swift in Sources */,
+				781EFE5C2154E56900B70CE7 /* UITableViewCell.swift in Sources */,
+				781EFE5D2154E56900B70CE7 /* UIImage.swift in Sources */,
+				781EFE5E2154E56900B70CE7 /* UIViewController.swift in Sources */,
+				781EFE5F2154E56900B70CE7 /* UINavigationBar.swift in Sources */,
+				781EFE602154E56900B70CE7 /* UIAlert.swift in Sources */,
+				781EFE612154E56900B70CE7 /* UIApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,9 +1,5 @@
 //
-//  UICollectionViewCell.swift
-//  MPLibrary
-//
-//  Created by Igor Danich on 06.10.16.
-//  Copyright © 2016 dclife. All rights reserved.
+//  DCUI
 //
 
 import Foundation

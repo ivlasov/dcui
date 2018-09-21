@@ -1,12 +1,17 @@
 //
-//  Alert.swift
-//  MPUI
-//
-//  Created by Igor on 08.12.15.
-//  Copyright © 2015 dclife. All rights reserved.
+//  DCUI
 //
 
 import UIKit
+
+public extension UIAlertAction {
+    
+    public var isChecked: Bool {
+        set {setValue(newValue, forKey: "checked")}
+        get {return (value(forKey: "checked") as? Bool) ?? false}
+    }
+    
+}
 
 fileprivate func FindWindow() -> UIWindow? {
     var window: UIWindow?
