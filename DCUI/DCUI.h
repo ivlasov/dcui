@@ -2,7 +2,7 @@
 //  DCUI
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 @import DCFoundation;
 #import <DCUI/DCUIUtils.h>
 
