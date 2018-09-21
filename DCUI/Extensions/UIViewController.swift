@@ -6,11 +6,11 @@
 import Foundation
 
 public struct KeyboardInfo {
-    let frameBegin      : CGRect
-    let frameEnd        : CGRect
-    let isLocal         : Bool
-    let animationCurve  : Int
-    let duration        : TimeInterval
+    public let frameBegin      : CGRect
+    public let frameEnd        : CGRect
+    public let isLocal         : Bool
+    public let animationCurve  : Int
+    public let duration        : TimeInterval
 }
 
 public extension KeyboardInfo {
